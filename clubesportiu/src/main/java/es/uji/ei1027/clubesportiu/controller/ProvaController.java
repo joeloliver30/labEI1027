@@ -59,6 +59,10 @@ public class ProvaController {
         provaDao.updateProva(prova);
         return "redirect:list";
     }
-
+    @RequestMapping(value="/delete/{nom}")
+    public String processDelete(@PathVariable String nom) {
+        provaDao.deleteProva(nom);
+        return "redirect:../list";
+    }
 
 }

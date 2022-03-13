@@ -24,9 +24,9 @@ public class ProvaDao {
         jdbcTemplate.update("INSERT INTO Prova VALUES(?, ?, ?, ?)",
                 prova.getNom(), prova.getDescripcio(),prova.getTipus(), prova.getData());
     }
-    public void deleteProva(Prova prova){
+    public void deleteProva(String  nomprova){
         jdbcTemplate.update("DELETE FROM Prova WHERE nom = ?",
-                prova.getNom());
+                nomprova);
     }
     public void updateProva(Prova prova){
         jdbcTemplate.update("UPDATE Prova  SET descripcio=?, tipus=?, data=? WHERE nom=?",

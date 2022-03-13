@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import es.uji.ei1027.clubesportiu.dao.NadadorDao;
 import es.uji.ei1027.clubesportiu.model.Nadador;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Controller
 @RequestMapping("/nadador") //①
 public class NadadorController {
@@ -49,6 +52,8 @@ public class NadadorController {
     @RequestMapping(value="/update/{nom}", method = RequestMethod.GET)
     public String editNadador(Model model, @PathVariable String nom) {
         model.addAttribute("nadador", nadadorDao.getNadador(nom));
+        List<String> genderList = Arrays.asList("Femeni", "Masculi");
+        model.addAttribute("genderList", genderList);
         return "nadador/update";
     }
     @RequestMapping(value="/update", method = RequestMethod.POST)

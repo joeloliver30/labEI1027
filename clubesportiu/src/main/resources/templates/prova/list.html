@@ -23,7 +23,7 @@
         <td th:text="${prova.nom}"></td>
         <td th:text="${prova.descripcio}"></td>
         <td th:text="${prova.tipus}"></td>
-        <td th:text="${prova.data}"></td>
+        <td th:text="${#temporals.format(prova.data,'dd MMMM yyyy')}"></td>
         <td><a th:href="@{/prova/update/{nom}(nom=${prova.nom})}">Edita</a>
         </td>
         <td><a th:href="@{/prova/delete/{nom}(nom=${prova.nom})}">Esborra</a>

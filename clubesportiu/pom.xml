@@ -56,6 +56,11 @@
 			<artifactId>jasypt</artifactId>
 			<version>1.9.2</version>
 		</dependency>
+		<dependency>
+			<groupId>es.uji.ei1027</groupId>
+			<artifactId>clubesportiu</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

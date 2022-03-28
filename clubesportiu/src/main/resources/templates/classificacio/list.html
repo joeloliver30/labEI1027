@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/base}">
 <head>
     <title>Gestionar Classificacions</title>
     <meta charset="UTF-8" />
@@ -8,8 +10,8 @@
           th:href="@{/css/natacio.css}"/>
 </head>
 <body>
+<div layout:fragment="content">
 <div class="container">
-    <h1>Llista de Classificacions</h1>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -33,6 +35,7 @@
         </tbody>
     </table>
     <a href="add" class="btn btn-success" role="button">Afegeix classificació</a>
+</div>
 </div>
 </body>
 </html>

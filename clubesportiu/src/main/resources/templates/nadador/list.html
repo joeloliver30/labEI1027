@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/base}">
 <head>
     <title>Gestionar Nadadors</title>
     <meta charset="UTF-8" />
@@ -8,7 +10,7 @@
           th:href="@{/css/natacio.css}"/>
 </head>
 <body>
-<h1>Llista de Nadadors</h1>
+<div layout:fragment="content">
 <div th:if="${#lists.isEmpty(nadadors)}">
     No hi ha nadadors en la base de dades
 </div>
@@ -39,5 +41,6 @@
     </tbody>
 </table>
 <a class="btn btn-primary" href="add">Afegeix nadador</a>
+</div>
 </body>
 </html>

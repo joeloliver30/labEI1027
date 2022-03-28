@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8" />
     <title>EI1027</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/natacio.css"
           th:href="@{/css/natacio.css}"/>
 </head>
 <body>
-<h1>Gestió del Club Esportiu</h1>
+<h1>Club Esportiu</h1>
+<div layout:fragment="content">
 <ul>
     <li><a href="nadador/list">Gestió de Nadadors</a></li>
     <li><a href="prova/list">Gestió de Proves</a></li>
     <li><a href="classificacio/list">Gestió de Classificacions</a></li>
-    <li><a href="classificacio/perpais">Clasificacio per pais</a></li>
     <li><a href="user/list">Llista de Usuaris</a></li>
 </ul>
+</div>
 </body>
 </html>

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/base}">
 <head>
     <title>Actualizar una classificacio</title>
     <meta charset="UTF-8" />
@@ -8,6 +10,7 @@
           th:href="@{/css/natacio.css}"/>
 </head>
 <body>
+<div layout:fragment="content">
 <h2>Classificacio a actualitzar</h2>
 <form action="#" th:action="@{/classificacio/update}"
       th:object="${classificacio}" method="post">
@@ -34,5 +37,6 @@
         </tr>
     </table>
 </form>
+</div>
 </body>
 </html>

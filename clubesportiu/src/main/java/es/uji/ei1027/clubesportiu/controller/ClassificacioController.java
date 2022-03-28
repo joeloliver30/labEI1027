@@ -89,12 +89,5 @@ public class ClassificacioController {
                 classificacioService.getClassificationByCountry(prova));
         return "classificacio/perpais";
     }
-    @RequestMapping("/perprova/{pais}")
-    public String listClsfPerProva(Model model, @PathVariable String pais) {
-        model.addAttribute("pais",pais);
-        model.addAttribute("classificacions",
-                classificacioService.getClassificationByProve(pais));
-        return "classificacio/perprova";
-    }
 
 }

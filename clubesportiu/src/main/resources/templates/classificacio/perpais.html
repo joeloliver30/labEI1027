@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/base}">
 <head>
   <title>Classificacions Duos Sincro, per país</title>
   <meta charset="UTF-8" />
@@ -8,6 +10,7 @@
         th:href="@{/css/natacio.css}"/>
 </head>
 <body>
+<div layout:fragment="content">
 <h1>Llista de classificacions</h1>
 <h2 th:text="${nomprova}"></h2>
 <h3>Nadadors per Pais</h3>
@@ -19,6 +22,7 @@
       <span th:text="${nadador.nom}"></span>
     </li>
   </ul>
+</div>
 </div>
 </body>
 </html>
